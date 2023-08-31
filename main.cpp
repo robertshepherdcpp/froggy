@@ -5,7 +5,7 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(840, 840), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(840, 840), "froggy");
 
     sf::Texture background_texture;
     sf::Sprite background_sprite;
