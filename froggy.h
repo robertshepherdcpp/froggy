@@ -6,16 +6,16 @@
 
 struct froggy
 {
-	froggy(std::string filename);
+	explicit froggy(std::string filename);
 
-	auto draw(sf::RenderWindow& window) -> void;
+	auto draw(sf::RenderWindow& window) noexcept -> void;
 
-	auto handleButtonPressed(sf::Event& event) -> void;
+	auto handleButtonPressed(sf::Event& event) noexcept -> void;
 
-	auto moveForward() -> void;
-	auto moveBackward() -> void;
-	auto moveLeft() -> void;
-	auto moveRight() -> void;
+	auto moveForward() noexcept -> void;
+	auto moveBackward() noexcept-> void;
+	auto moveLeft() noexcept -> void;
+	auto moveRight() noexcept -> void;
 
 	sf::Texture froggy_texture;
 	sf::Sprite froggy_sprite;

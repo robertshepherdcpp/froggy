@@ -8,12 +8,12 @@ froggy::froggy(std::string filename)
 	froggy_sprite.setPosition(sf::Vector2f(420, 820));
 }
 
-auto froggy::draw(sf::RenderWindow& window) -> void
+auto froggy::draw(sf::RenderWindow& window) noexcept-> void
 {
 	window.draw(froggy_sprite);
 }
 
-auto froggy::handleButtonPressed(sf::Event& event) -> void
+auto froggy::handleButtonPressed(sf::Event& event) noexcept-> void
 {
 	if (event.key.code == sf::Keyboard::W) { moveForward();  }
 	if (event.key.code == sf::Keyboard::S) { moveBackward(); }
@@ -21,7 +21,7 @@ auto froggy::handleButtonPressed(sf::Event& event) -> void
 	if (event.key.code == sf::Keyboard::D) { moveRight();    }
 }
 
-auto froggy::moveForward() -> void
+auto froggy::moveForward() noexcept -> void
 {
 	if (!((froggy_sprite.getPosition().y - froggy_sprite.getGlobalBounds().height) < 0))
 	{
@@ -29,7 +29,7 @@ auto froggy::moveForward() -> void
 	}
 }
 
-auto froggy::moveBackward() -> void
+auto froggy::moveBackward() noexcept-> void
 {
 	if (!((froggy_sprite.getPosition().y + froggy_sprite.getGlobalBounds().height) > 840))
 	{
@@ -37,7 +37,7 @@ auto froggy::moveBackward() -> void
 	}
 }
 
-auto froggy::moveLeft() -> void
+auto froggy::moveLeft() noexcept -> void
 {
 	if (!((froggy_sprite.getPosition().x - froggy_sprite.getGlobalBounds().width) < 0))
 	{
@@ -45,7 +45,7 @@ auto froggy::moveLeft() -> void
 	}
 }
 
-auto froggy::moveRight() -> void
+auto froggy::moveRight() noexcept -> void
 {
 	if (!((froggy_sprite.getPosition().x + froggy_sprite.getGlobalBounds().width) > 840))
 	{
