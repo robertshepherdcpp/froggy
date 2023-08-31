@@ -30,6 +30,10 @@ auto froggy::moveForward() noexcept -> void
 	{
 		froggy_sprite.setPosition(sf::Vector2f(froggy_sprite.getPosition().x, froggy_sprite.getPosition().y - froggy_sprite.getGlobalBounds().height));
 	}
+	else
+	{
+		froggy_sprite.setPosition(sf::Vector2f(froggy_sprite.getPosition().x, 820));
+	}
 }
 
 auto froggy::moveBackward() noexcept-> void

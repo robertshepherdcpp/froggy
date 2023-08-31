@@ -17,7 +17,7 @@ auto carManager::randomNumber(int up_to) noexcept
 
 carManager::carManager(std::string filename)
 {
-    for (const auto i : std::ranges::views::iota(0) | std::ranges::views::take(4))
+    for (const auto i : std::ranges::views::iota(0) | std::ranges::views::take(40))
     {
         cars.emplace_back(filename, randomNumber(320) + 480, randomNumber(820));
     }
