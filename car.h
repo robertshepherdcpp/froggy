@@ -4,7 +4,7 @@
 
 struct car
 {
-	explicit car(std::string filename, int y_coord, int Xcoord = 0);
+	car(std::string filename, int y_coord, int Xcoord = 0);
 
 	auto draw(sf::RenderWindow& window) noexcept -> void;
 

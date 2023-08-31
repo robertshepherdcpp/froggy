@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "froggy.h"
+#include "carManager.h"
 
 int main()
 {
@@ -13,6 +14,7 @@ int main()
     background_sprite.setTexture(background_texture);
 
     froggy frog("froggy.png");
+    carManager cars("car.png");
 
     while (window.isOpen())
     {
@@ -33,8 +35,11 @@ int main()
             }
         }
 
+        cars.update();
+
         window.clear();
         window.draw(background_sprite);
+        cars.draw(window);
         frog.draw(window);
         window.display();
     }

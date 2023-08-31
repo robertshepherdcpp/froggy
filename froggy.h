@@ -6,7 +6,7 @@
 
 struct froggy
 {
-	explicit froggy(std::string filename);
+	froggy(std::string filename);
 
 	auto draw(sf::RenderWindow& window) noexcept -> void;
 
