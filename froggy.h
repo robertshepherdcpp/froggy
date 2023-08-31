@@ -19,6 +19,8 @@ struct froggy
 
 	auto setDead() noexcept -> void;
 
+	auto update() noexcept -> void;
+
 	sf::Texture froggy_texture;
 	sf::Sprite froggy_sprite;
 

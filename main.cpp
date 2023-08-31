@@ -36,6 +36,7 @@ int main()
         }
 
         cars.update();
+        frog.update();
 
         if (cars.hasCrashed(frog)) { frog.setDead(); }
 

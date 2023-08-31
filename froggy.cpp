@@ -64,3 +64,11 @@ auto froggy::setDead() noexcept -> void
 {
 	is_dead = true;
 }
+
+auto froggy::update() noexcept -> void
+{
+	if (froggy_sprite.getPosition().y >= 80 && froggy_sprite.getPosition().y <= 330)
+	{
+		is_dead = true;
+	}
+}
