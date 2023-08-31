@@ -33,7 +33,7 @@ auto carManager::draw(sf::RenderWindow& window) noexcept -> void
 
 auto carManager::update() noexcept -> void
 {
-    if ((std::chrono::system_clock::now() - lastTimePoint) >= 50ms)
+    if ((std::chrono::system_clock::now() - lastTimePoint) >= 25ms)
     {
         for (car& c : cars)
         {
