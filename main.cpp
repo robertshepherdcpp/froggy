@@ -37,6 +37,8 @@ int main()
 
         cars.update();
 
+        if (cars.hasCrashed(frog)) { frog.setDead(); }
+
         window.clear();
         window.draw(background_sprite);
         cars.draw(window);

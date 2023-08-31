@@ -31,3 +31,8 @@ auto car::setPosition(sf::Vector2f pos) noexcept -> void
 {
 	car_sprite.setPosition(pos);
 }
+
+auto car::hasCrashed(froggy& frog) noexcept -> bool
+{
+	return car_sprite.getGlobalBounds().intersects(frog.froggy_sprite.getGlobalBounds());
+}

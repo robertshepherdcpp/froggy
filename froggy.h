@@ -17,6 +17,10 @@ struct froggy
 	auto moveLeft() noexcept -> void;
 	auto moveRight() noexcept -> void;
 
+	auto setDead() noexcept -> void;
+
 	sf::Texture froggy_texture;
 	sf::Sprite froggy_sprite;
+
+	bool is_dead = false;
 };

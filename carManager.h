@@ -5,6 +5,7 @@
 #include<chrono>
 
 #include "car.h"
+#include "froggy.h"
 
 struct carManager
 {
@@ -15,6 +16,8 @@ struct carManager
 	auto randomNumber(int up_to) noexcept;
 
 	auto update() noexcept -> void;
+
+	auto hasCrashed(froggy& frog) noexcept -> bool;
 
 	std::vector<car> cars{};
 

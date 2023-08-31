@@ -19,7 +19,7 @@ carManager::carManager(std::string filename)
 {
     for (const auto i : std::ranges::views::iota(0) | std::ranges::views::take(4))
     {
-        cars.push_back(car(filename, randomNumber(300) - 60, randomNumber(820)));
+        cars.push_back(car(filename, randomNumber(320) + 480, randomNumber(820)));
     }
 }
 
@@ -41,4 +41,14 @@ auto carManager::update() noexcept -> void
         }
         lastTimePoint = std::chrono::system_clock::now();
     }
+}
+
+auto carManager::hasCrashed(froggy& frog) noexcept -> bool
+{
+    for (car& c : cars)
+    {
+        if (c.hasCrashed(frog)) { return true; }
+    }
+
+    return false;
 }

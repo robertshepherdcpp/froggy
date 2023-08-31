@@ -10,7 +10,10 @@ froggy::froggy(std::string filename)
 
 auto froggy::draw(sf::RenderWindow& window) noexcept-> void
 {
-	window.draw(froggy_sprite);
+	if (!is_dead)
+	{
+		window.draw(froggy_sprite);
+	}
 }
 
 auto froggy::handleButtonPressed(sf::Event& event) noexcept-> void
@@ -51,4 +54,9 @@ auto froggy::moveRight() noexcept -> void
 	{
 		froggy_sprite.setPosition(sf::Vector2f(froggy_sprite.getPosition().x + froggy_sprite.getGlobalBounds().width, froggy_sprite.getPosition().y));
 	}
+}
+
+auto froggy::setDead() noexcept -> void
+{
+	is_dead = true;
 }
