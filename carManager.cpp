@@ -19,7 +19,7 @@ carManager::carManager(std::string filename)
 {
     for (const auto i : std::ranges::views::iota(0) | std::ranges::views::take(4))
     {
-        cars.push_back(car(filename, randomNumber(320) + 480, randomNumber(820)));
+        cars.emplace_back(filename, randomNumber(320) + 480, randomNumber(820));
     }
 }
 
