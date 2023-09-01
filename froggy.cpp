@@ -8,7 +8,7 @@ froggy::froggy(std::string filename)
 	froggy_sprite.setPosition(sf::Vector2f(420, 820));
 }
 
-auto froggy::draw(sf::RenderWindow& window) noexcept-> void
+auto froggy::draw(sf::RenderWindow& window) noexcept -> void
 {
 	if (!is_dead)
 	{
@@ -16,7 +16,7 @@ auto froggy::draw(sf::RenderWindow& window) noexcept-> void
 	}
 }
 
-auto froggy::handleButtonPressed(sf::Event& event) noexcept-> void
+auto froggy::handleButtonPressed(sf::Event& const event) noexcept-> void
 {
 	if (event.key.code == sf::Keyboard::W) { moveForward();  }
 	if (event.key.code == sf::Keyboard::S) { moveBackward(); }

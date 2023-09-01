@@ -10,7 +10,7 @@ struct froggy
 
 	auto draw(sf::RenderWindow& window) noexcept -> void;
 
-	auto handleButtonPressed(sf::Event& event) noexcept -> void;
+	auto handleButtonPressed(sf::Event& const event) noexcept -> void;
 
 	auto moveForward() noexcept -> void;
 	auto moveBackward() noexcept-> void;

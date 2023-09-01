@@ -1,6 +1,6 @@
 #include "car.h"
 
-car::car(std::string filename, int Ycoord, int Xcoord)
+car::car(const std::string filename, int Ycoord, int Xcoord)
 {
 	car_texture.loadFromFile(filename);
 	car_sprite.setTexture(car_texture);
@@ -32,7 +32,7 @@ auto car::setPosition(sf::Vector2f pos) noexcept -> void
 	car_sprite.setPosition(pos);
 }
 
-auto car::hasCrashed(froggy& frog) noexcept -> bool
+auto car::hasCrashed(const froggy& frog) const noexcept -> bool
 {
 	return car_sprite.getGlobalBounds().intersects(frog.froggy_sprite.getGlobalBounds());
 }

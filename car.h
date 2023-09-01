@@ -6,7 +6,7 @@
 
 struct car
 {
-	car(std::string filename, int y_coord, int Xcoord = 0);
+	car(const std::string filename, int y_coord, int Xcoord = 0);
 
 	auto draw(sf::RenderWindow& window) noexcept -> void;
 
@@ -14,7 +14,7 @@ struct car
 
 	auto setPosition(sf::Vector2f pos) noexcept -> void;
 
-	auto hasCrashed(froggy& frog) noexcept -> bool;
+	auto hasCrashed(const froggy& frog) const noexcept -> bool;
 
 	int x_coord = 0;
 	int y_coord = 0;
