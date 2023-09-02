@@ -2,6 +2,7 @@
 
 #include "froggy.h"
 #include "carManager.h"
+#include "logManager.h"
 
 int main()
 {
@@ -15,6 +16,7 @@ int main()
 
     froggy frog("froggy.png");
     carManager cars("car.png");
+    logManager logs("log.png");
 
     while (window.isOpen())
     {
@@ -36,13 +38,16 @@ int main()
         }
 
         cars.update();
+        logs.update();
         frog.update();
 
         if (cars.hasCrashed(frog)) { frog.setDead(); }
+        if (logs.froggyIsOnLog(frog)) { frog.setOnLog(); }
 
         window.clear();
         window.draw(background_sprite);
         cars.draw(window);
+        logs.draw(window);
         frog.draw(window);
         window.display();
     }

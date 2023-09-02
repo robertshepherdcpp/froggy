@@ -22,6 +22,8 @@ auto froggy::handleButtonPressed(sf::Event& const event) noexcept-> void
 	if (event.key.code == sf::Keyboard::S) { moveBackward(); }
 	if (event.key.code == sf::Keyboard::A) { moveLeft();     }
 	if (event.key.code == sf::Keyboard::D) { moveRight();    }
+	if (event.key.code == sf::Keyboard::Q) { moveForward(); moveLeft(); }
+	if (event.key.code == sf::Keyboard::E) { moveForward(); moveRight(); }
 }
 
 auto froggy::moveForward() noexcept -> void
@@ -65,9 +67,14 @@ auto froggy::setDead() noexcept -> void
 	is_dead = true;
 }
 
+auto froggy::setOnLog() noexcept -> void
+{
+	is_on_log = true;
+}
+
 auto froggy::update() noexcept -> void
 {
-	if (froggy_sprite.getPosition().y >= 80 && froggy_sprite.getPosition().y <= 330)
+	if (froggy_sprite.getPosition().y >= 80 && froggy_sprite.getPosition().y <= 330 && !is_on_log)
 	{
 		is_dead = true;
 	}

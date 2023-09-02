@@ -18,6 +18,7 @@ struct froggy
 	auto moveRight() noexcept -> void;
 
 	auto setDead() noexcept -> void;
+	auto setOnLog() noexcept -> void;
 
 	auto update() noexcept -> void;
 
@@ -25,4 +26,5 @@ struct froggy
 	sf::Sprite froggy_sprite;
 
 	bool is_dead = false;
+	bool is_on_log = false;
 };

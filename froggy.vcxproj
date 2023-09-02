@@ -131,12 +131,16 @@
     <ClCompile Include="car.cpp" />
     <ClCompile Include="carManager.cpp" />
     <ClCompile Include="froggy.cpp" />
+    <ClCompile Include="log.cpp" />
+    <ClCompile Include="logManager.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="car.h" />
     <ClInclude Include="carManager.h" />
     <ClInclude Include="froggy.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="logManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
