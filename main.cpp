@@ -1,6 +1,8 @@
 #include <SFML/Graphics.hpp>
 
 #include "froggy.h"
+#include "car.h"
+#include "log.h"
 #include "carManager.h"
 #include "logManager.h"
 

@@ -3,7 +3,6 @@
 #include<random>
 #include<chrono>
 
-#include "log.h"
 #include "logManager.h"
 
 using namespace std::chrono_literals;

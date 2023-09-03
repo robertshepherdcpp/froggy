@@ -2,15 +2,13 @@
 
 #include<SFML/Graphics.hpp>
 
-#include<string>
-
 #include "froggy.h"
 
 struct log
 {
 	log();
 
-	log(const std::string filename, int y_coord, int Xcoord = 0);
+	log(const std::string filename, int y_coord, int Xcoord);
 
 	auto draw(sf::RenderWindow& window) noexcept -> void;
 
