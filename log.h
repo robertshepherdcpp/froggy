@@ -2,6 +2,8 @@
 
 #include<SFML/Graphics.hpp>
 
+#include<string>
+
 #include "froggy.h"
 
 struct log

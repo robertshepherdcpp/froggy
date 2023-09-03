@@ -1,4 +1,9 @@
+#include<SFML/Graphics.hpp>
+
+#include<string>
+
 #include "log.h"
+#include "froggy.h"
 
 log::log()
 {
