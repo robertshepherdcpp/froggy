@@ -18,7 +18,7 @@ int main()
 
     froggy frog("froggy.png");
     carManager cars("car.png");
-    logManager logs("log.png");
+    //logManager logs("log.png");
 
     while (window.isOpen())
     {

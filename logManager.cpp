@@ -17,7 +17,7 @@ auto logManager::randomNumber(int up_to) noexcept
 
 logManager::logManager(std::string filename)
 {
-    for (const auto i : std::ranges::views::iota(0) | std::ranges::views::take(40))
+    for ([[maybe_unused]] const auto i : std::ranges::views::iota(0) | std::ranges::views::take(40))
     {
         logs.emplace_back(filename, randomNumber(320) + 60, randomNumber(820));
     }
